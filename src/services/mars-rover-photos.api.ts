@@ -1,5 +1,6 @@
-const key = "P5u8g615Qf5YeYqHecOPZtfiWxovuv40RoG6pWve";
 // const baseUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=${key}`;
+
+import {API_KEY} from "../config";
 
 export interface MarsRoverPhotosApiParams {
   earth_date: string;
@@ -57,7 +58,7 @@ export const MarsRoverPhotosApi = {
     }
 
     return fetch(
-      `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=${key}&${urlParams.toString()}`,
+      `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=${API_KEY}&${urlParams.toString()}`,
     ).then((resp) => resp.json());
   },
 };

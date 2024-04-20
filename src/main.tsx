@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Root } from "./core/template/Root.tsx";
 import { Rover } from "./pages/rover/Rover.tsx";
 import { RoverFavoritesPage } from "./pages/rover-favorites/RoverFavorites.tsx";
+import {Apod} from "./pages/apod/Apod";
+import {ApodApi} from "./services/apod.api";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: "apod",
-        element: <div>APOD</div>,
+        element: <Apod/>,
       },
     ],
   },
